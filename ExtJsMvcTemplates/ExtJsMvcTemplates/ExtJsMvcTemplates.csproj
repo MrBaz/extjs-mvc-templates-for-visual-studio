@@ -243,7 +243,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
     <Folder Include="Templates\Solutions\Projects\ExtJsApplication\app\controller\" />
     <Folder Include="Templates\Solutions\Projects\ExtJsApplication\app\model\" />
     <Folder Include="Templates\Solutions\Projects\ExtJsApplication\app\store\" />
