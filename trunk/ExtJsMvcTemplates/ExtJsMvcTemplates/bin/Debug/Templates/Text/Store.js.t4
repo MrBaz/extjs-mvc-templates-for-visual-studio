@@ -1,0 +1,31 @@
+﻿<#@ template language="C#" #>
+<#@ property processor="PropertyProcessor" name="CopyrightInfo" #>
+<#@ property processor="PropertyProcessor" name="StoreClassName" #>
+<#@ property processor="PropertyProcessor" name="StoreNamespace" #>
+<#@ property processor="PropertyProcessor" name="StoreSelectedExtends" #>
+<#@ property processor="PropertyProcessor" name="StoreSelectedProxyType" #>
+<#@ property processor="PropertyProcessor" name="StoreProxyApi" #>
+<#@ property processor="PropertyProcessor" name="StoreProxyParams" #>
+<#@ property processor="PropertyProcessor" name="StoreSelectedModel" #>
+<#@ property processor="PropertyProcessor" name="RootNamespace" #>
+<#@ assembly name="System.dll" #>
+<#= CopyrightInfo #>
+Ext.define('<#= RootNamespace #>.store.<#= StoreNamespace #><#= StoreClassName #>', {
+    extend: '<#= StoreSelectedExtends #>', <# if (!string.IsNullOrEmpty(StoreSelectedModel))
+		{#>
+			 
+	model: '<#= RootNamespace #>.model<#= StoreSelectedModel #>'
+		<# } #>
+		<# if (StoreSelectedProxyType != "none")
+		{#>,
+	proxy: {
+		type: '<#= StoreSelectedProxyType #>',
+		<#= StoreProxyParams #>
+		<#= StoreProxyApi #>
+	}
+	<#} #>
+    
+});
+
+ 
+	
