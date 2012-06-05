@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TemplateConfiguration>
+  <ModelProviders>
+  </ModelProviders>
+  <AppSettings>
+    <ExtRootFolder Name="app"></ExtRootFolder>
+    <ExtRootNamespace Name="SN"></ExtRootNamespace>
+    <CopyrightInfoPath Location="C:\CopyrightInfo.txt"></CopyrightInfoPath>
+  </AppSettings>
+  <Defaults>
+    <Model>Empty</Model>
+    <Store>1</Store>
+    <Controller>1</Controller>
+  </Defaults>
+</TemplateConfiguration>

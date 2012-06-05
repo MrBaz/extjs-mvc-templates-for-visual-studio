@@ -1,0 +1,31 @@
+﻿<#@ template language="C#" #>
+<#@ property processor="PropertyProcessor" name="CopyrightInfo" #>
+<#@ property processor="PropertyProcessor" name="ModelClassName" #>
+<#@ property processor="PropertyProcessor" name="ModelNamespace" #>
+<#@ property processor="PropertyProcessor" name="ModelExtends" #>
+<#@ property processor="PropertyProcessor" name="ModelSelectedProxyType" #>
+<#@ property processor="PropertyProcessor" name="ModelProxyApi" #>
+<#@ property processor="PropertyProcessor" name="ModelProxyParams" #>
+<#@ property processor="PropertyProcessor" name="ModelFields" #>
+<#@ property processor="PropertyProcessor" name="RootNamespace" #>
+<#@ assembly name="System.dll" #>
+<#= CopyrightInfo #>
+Ext.define('<#= RootNamespace #>.model.<#= ModelNamespace #><#= ModelClassName #>', {
+    extend: '<#= ModelExtends #>',
+
+    fields: [
+		<#= ModelFields #>
+    ],
+
+    proxy: {
+        <# if (!string.IsNullOrEmpty(ModelProxyApi) || ModelSelectedProxyType == "ajax")
+			{
+				#>type: '<#= ModelSelectedProxyType #>',
+			<#} #>
+		<#= ModelProxyParams #>
+		<#= ModelProxyApi #>
+    }
+});
+
+ 
+	
