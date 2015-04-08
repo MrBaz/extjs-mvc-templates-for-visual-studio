@@ -1,0 +1,3 @@
+This project is aimed at increasing productivity of developers interested in using Extjs as their front-end technology for web application development and Visual Studio 2010 as their IDE.
+
+Extjs is a renowned javascript library for developing rich web applications which has implemented MVC(model-view-controller). This Visual Studio extension is inspired by Microsoft ASP.Net MVC's scaffolding templates and provides similar functionality for creating Extjs components using templates.

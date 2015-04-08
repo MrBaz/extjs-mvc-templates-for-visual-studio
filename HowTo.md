@@ -1,0 +1,1 @@
+Please see the Extjs Templates User Guide.docx in the "Downloads" section.
